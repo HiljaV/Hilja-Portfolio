@@ -1,25 +1,25 @@
 :root {
 
     --section-gap: 8rem;
-    --section-gap-inner: calc( var(--section-gap ) * 0.75 );
+    --section-gap-inner: 5rem;
 
     --gap-xl: 4rem;
     --gap-l: 3rem;
     --gap-m: 2rem;
     --gap-s: 1rem;
 
-    --border-radius: 0px;
+    --border-radius: 99px;
 
-    --color-dark: #222;
+    --color-dark: #363638;
     --color-dark-200: #333;
     --color-dark-300: #666;
-    --color-dark-500: #888;
+    --color-dark-500: #888;  //i projektet
     --color-dark-600: #999;
     --color-dark-700: #b5b5b5;
-    --color-dark-800: #d5d5d5;
+    --color-dark-800: #F2F1EF; 
     --color-dark-900: #f1f1f1;
 
-    --color-accent: #009fbb;
+    --color-accent: #EEE3CD;
     --color-accent-200: #009fbb;
     --color-accent-300: #009fbb;
     --color-accent-400: #009fbb;
@@ -30,7 +30,7 @@
     --color-accent-900: #009fbb;
 
 
-    --color-light: #efead8;
+    --color-light: #FFFFFF;
     --color-light-200: #efead8;
     --color-light-300: #efead8;
     --color-light-400: #efead8;
@@ -40,8 +40,8 @@
     --color-light-800: #efead8;
     --color-light-900: #efead8;
 
-    --font-sans: 'Arial', sans-serif;
-    --font-serif: 'Georgia', serif;
+    --font-sans: 'futura-pt', sans-serif;
+    --font-header: 'sirenia', sans-serif;
 
     --line-height: 1.5;
 
@@ -49,10 +49,13 @@
     --font-size: 1rem;
 
     --font-size-1: var(--font-size);
-    --font-size-2: calc( var(--fontsize-1) * var(--font-scale) );
-    --font-size-3: calc( var(--fontsize-2) * var(--font-scale) );
-    --font-size-4: calc( var(--fontsize-3) * var(--font-scale) );
-    --font-size-5: calc( var(--fontsize-4) * var(--font-scale) );
-    --font-size-6: calc( var(--fontsize-5) * var(--font-scale) );
+    --font-size-2: calc( var(--font-size-1) * var(--font-scale) );
+    --font-size-3: calc( var(--font-size-2) * var(--font-scale) );
+    --font-size-4: calc( var(--font-size-3) * var(--font-scale) );
+    --font-size-5: calc( var(--font-size-4) * var(--font-scale) );
+    --font-size-6: calc( var(--font-size-5) * var(--font-scale) );
+    --font-size-7: calc( var(--font-size-6) * var(--font-scale) );
 
+    $page-width: 72rem;
+    --grid-container: [full-start] minmax(32px, 1fr) [inner-start] minmax(0, $page-width) [inner-end] minmax(32px, 1fr) [full-end]
 }

@@ -1,41 +1,51 @@
 body {
     font-family: var(--font-sans);
+    font-size: var(--font-size-4);
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-serif);
+    font-family: var(--font-header);
+    color: var(--color-dark);
+
+    // Sirenia Medium
+    font-weight: 500;
+    font-style: normal;
 }
 
 h1 {
-
+    font-size: var(--font-size-7)
 }
 
 h2 {
-
+    font-size: var(--font-size-6)
 }
 
 h3 {
-
+    font-size: var(--font-size-5)
 }
 
 h4 {
-
+    font-size: var(--font-size-4)
 }
 
 h5 {
-
+    font-size: var(--font-size-3)
 }
 
 h6 {
-
+    font-size: var(--font-size-2)
 }
 
 p {
     line-height: var(--line-height);
+    color: var(--color-dark);
+
+    // Futura PT Book
+    font-weight: 400;
+    font-style: normal;
 }
 
 a {
-
     color: var(-color-dark);
     text-decoration: none;
     line-height: var(--line-height);
@@ -46,6 +56,7 @@ a {
 
 span {
     line-height: var(--line-height);
+    color: var(--color-dark);
 }
 
 li {
