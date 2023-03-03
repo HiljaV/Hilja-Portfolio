@@ -1,0 +1,27 @@
+@use '../../components/buttons' as button;
+
+.hero {
+    min-height: 100vh;
+    background: url(assets/images/Hero_background@2x.jpg) no-repeat;
+    background-size: cover;
+    background-position: top center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__inner {
+        // funkar den?
+        grid: inner;
+    }
+
+    // test
+    &__content {
+        // För att tummen ska kunna komma åt knappar, eller ska avståndet till kanten fixas med grid senare?
+        margin: 0 32px;
+        
+    }
+
+    &__button {
+        @include button.default;
+    }
+}
