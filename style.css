@@ -1,20 +1,20 @@
 :root {
   --section-gap: 8rem;
-  --section-gap-inner: calc( var(--section-gap ) * 0.75 );
+  --section-gap-inner: 5rem;
   --gap-xl: 4rem;
   --gap-l: 3rem;
   --gap-m: 2rem;
   --gap-s: 1rem;
-  --border-radius: 0px;
-  --color-dark: #222;
+  --border-radius: 99px;
+  --color-dark: #363638;
   --color-dark-200: #333;
   --color-dark-300: #666;
   --color-dark-500: #888;
   --color-dark-600: #999;
   --color-dark-700: #b5b5b5;
-  --color-dark-800: #d5d5d5;
+  --color-dark-800: #F2F1EF;
   --color-dark-900: #f1f1f1;
-  --color-accent: #009fbb;
+  --color-accent: #EEE3CD;
   --color-accent-200: #009fbb;
   --color-accent-300: #009fbb;
   --color-accent-400: #009fbb;
@@ -23,7 +23,7 @@
   --color-accent-700: #009fbb;
   --color-accent-800: #009fbb;
   --color-accent-900: #009fbb;
-  --color-light: #efead8;
+  --color-light: #FFFFFF;
   --color-light-200: #efead8;
   --color-light-300: #efead8;
   --color-light-400: #efead8;
@@ -32,17 +32,19 @@
   --color-light-700: #efead8;
   --color-light-800: #efead8;
   --color-light-900: #efead8;
-  --font-sans: "Arial", sans-serif;
-  --font-serif: "Georgia", serif;
+  --font-sans: "futura-pt", sans-serif;
+  --font-header: "sirenia", sans-serif;
   --line-height: 1.5;
   --font-scale: 1.25;
   --font-size: 1rem;
   --font-size-1: var(--font-size);
-  --font-size-2: calc( var(--fontsize-1) * var(--font-scale) );
-  --font-size-3: calc( var(--fontsize-2) * var(--font-scale) );
-  --font-size-4: calc( var(--fontsize-3) * var(--font-scale) );
-  --font-size-5: calc( var(--fontsize-4) * var(--font-scale) );
-  --font-size-6: calc( var(--fontsize-5) * var(--font-scale) );
+  --font-size-2: calc( var(--font-size-1) * var(--font-scale) );
+  --font-size-3: calc( var(--font-size-2) * var(--font-scale) );
+  --font-size-4: calc( var(--font-size-3) * var(--font-scale) );
+  --font-size-5: calc( var(--font-size-4) * var(--font-scale) );
+  --font-size-6: calc( var(--font-size-5) * var(--font-scale) );
+  --font-size-7: calc( var(--font-size-6) * var(--font-scale) );
+  --grid-container: [full-start] minmax(32px, 1fr) [inner-start] minmax(0, $page-width) [inner-end] minmax(32px, 1fr) [full-end] ;
 }
 
 * {
@@ -60,14 +62,45 @@ img {
 
 body {
   font-family: var(--font-sans);
+  font-size: var(--font-size-4);
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-serif);
+  font-family: var(--font-header);
+  color: var(--color-dark);
+  font-weight: 500;
+  font-style: normal;
+}
+
+h1 {
+  font-size: var(--font-size-7);
+}
+
+h2 {
+  font-size: var(--font-size-6);
+}
+
+h3 {
+  font-size: var(--font-size-5);
+}
+
+h4 {
+  font-size: var(--font-size-4);
+}
+
+h5 {
+  font-size: var(--font-size-3);
+}
+
+h6 {
+  font-size: var(--font-size-2);
 }
 
 p {
   line-height: var(--line-height);
+  color: var(--color-dark);
+  font-weight: 400;
+  font-style: normal;
 }
 
 a {
@@ -81,10 +114,63 @@ a:hover {
 
 span {
   line-height: var(--line-height);
+  color: var(--color-dark);
 }
 
 li {
   line-height: var(--line-height);
+}
+
+.site-header {
+  position: fixed;
+  z-index: 999;
+  height: 160px;
+  width: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  padding: 0 32px;
+}
+.site-header__content {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-m);
+}
+.site-header__logo-image {
+  max-height: 10vh;
+}
+.hero {
+  min-height: 100vh;
+  background: url(assets/images/Hero_background@2x.jpg) no-repeat;
+  background-size: cover;
+  background-position: top center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero__inner {
+  grid: inner;
+}
+.hero__content {
+  margin: 0 32px;
+}
+.hero__button {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  padding: 0.5rem 0.8rem;
+  border: 0;
+  border-radius: 0rem;
+  font-size: var(--font-size-3);
+  font-family: var(--font-header);
+  font-weight: 500;
+  font-style: normal;
+  display: inline-block;
+  text-decoration: none;
+}
+.hero__button:hover {
+  background-color: var(--color-light);
+  color: var(--color-dark);
 }
 
 /*# sourceMappingURL=style.css.map */
