@@ -1,27 +1,76 @@
 @use '../../components/buttons' as button;
+@use '../../utilities/responsive';
 
 .hero {
     min-height: 100vh;
     background: url(assets/images/Hero_background@2x.jpg) no-repeat;
     background-size: cover;
     background-position: top center;
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
+    grid-template-columns: [full-start] minmax(32px, 1fr) [inner-start] minmax(0, 85rem) [inner-end] minmax(32px, 1fr) [full-end];
+
+    //640px (40rem)
+    @include responsive.max(40rem) {
+        padding: 0 var(--gap-s);
+        grid-template-columns: 1fr;
+    }
+    
 
     &__inner {
-        // funkar den?
-        grid: inner;
+        grid-column: inner;
+        grid-template-columns: 1fr 1fr;
+        display: grid;
+
+        // 1504px (94rem)
+        @include responsive.max(94rem) {
+            padding-left: var(--gap-m);
+        }
+
+        //1360px (85rem)
+        @include responsive.max(85rem) {
+            grid-template-columns: 1.5fr 0.5fr;
+        }
+
+        //640px (40rem)
+        @include responsive.max(40rem) {
+            padding: 0 var(--gap-s);
+            grid-template-columns: 1fr;
+        }
+        
+    }
+    
+    &__content {
+        
     }
 
-    // test
-    &__content {
-        // För att tummen ska kunna komma åt knappar, eller ska avståndet till kanten fixas med grid senare?
-        margin: 0 32px;
-        
+    &__title {
+        margin-top: 0;
+
+        //640px (40rem)
+        @include responsive.max(40rem) {
+            text-align: center;
+        }   
+    }
+
+    &__text {
+        @include responsive.max(30rem) {
+            font-size: var(--font-size-3);
+        }       
     }
 
     &__button {
         @include button.default;
+
+        @include responsive.max(30rem) {
+            font-size: var(--font-size-2);
+        }
+    }
+
+    &__scroll-down {
+        position: absolute;
+        bottom: 2rem;
+        padding-left: 12rem;
     }
 }

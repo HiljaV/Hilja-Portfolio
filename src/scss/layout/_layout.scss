@@ -1,0 +1,18 @@
+@use '../utilities/responsive';
+
+@mixin default() {
+    display: grid;
+    grid-template-columns: var(--grid-container);
+    padding: var(--section-gap);
+
+    &__inner {
+        grid-column: inner;
+    }
+}
+
+.container {
+    @include responsive.max(30rem) {
+        --section-gap: 5rem;
+        --section-gap--inner: 4rem;
+    }
+}

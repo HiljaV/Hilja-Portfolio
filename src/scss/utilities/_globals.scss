@@ -12,7 +12,7 @@
 
     --color-dark: #363638;
     --color-dark-200: #333;
-    --color-dark-300: #666;
+    --color-dark-300: #666;  //i projektet
     --color-dark-500: #888;  //i projektet
     --color-dark-600: #999;
     --color-dark-700: #b5b5b5;
@@ -56,6 +56,7 @@
     --font-size-6: calc( var(--font-size-5) * var(--font-scale) );
     --font-size-7: calc( var(--font-size-6) * var(--font-scale) );
 
-    $page-width: 72rem;
-    --grid-container: [full-start] minmax(32px, 1fr) [inner-start] minmax(0, $page-width) [inner-end] minmax(32px, 1fr) [full-end]
+    --page-width: 68rem;
+    --grid-container: [full-start] minmax(32px, 1fr) [inner-start] minmax(0, var(--page-width)) [inner-end] minmax(32px, 1fr) [full-end];
+    
 }

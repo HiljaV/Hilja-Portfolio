@@ -1,0 +1,18 @@
+@use '../utilities/responsive';
+.site-footer {
+    background-color: var(--color-accent);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 2rem;
+    font-size: var(--font-size-2);
+    color: var(--color-dark);
+
+    &__content {
+
+        @include responsive.max(40rem) {
+            font-size: var(--font-size-1);
+        }
+    }
+}

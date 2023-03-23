@@ -1,0 +1,74 @@
+@use '../../layout/layout';
+@use '../../components/details';
+@use '../../utilities/responsive';
+
+.contact {
+    @include layout.default();
+
+    // 1504px (94rem)
+    @include responsive.max(94rem) {
+        padding-left: var(--gap-m);
+        padding-right: var(--gap-m);
+    } 
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        gap: var(--gap-m);
+        
+        //1360px (85rem)
+        @include responsive.max(85rem) {
+            flex-direction: column;
+            }        
+    }
+
+}
+
+.contact-card {
+
+    max-width: 410px;
+    width: 100%;
+
+    &__title {
+
+        margin: 0;
+
+        &:after {
+            content: url('assets/icons/Divider.svg');
+            display: block;
+            margin-top: 0;
+        }
+
+    }
+
+    &__text {
+        margin: 0;
+    }
+
+    &__logo-image {
+        max-height: 20vh;
+
+    @include responsive.max(30rem) {
+        max-height: 15vh;
+    }
+    }
+
+    //1024px (64rem)
+    @include responsive.max(64rem) {
+        flex: 1;
+        max-width: 100%;
+    }
+
+}
+
+.contact-form {
+    flex: 0 1 50%;
+
+    input, textarea {
+        margin-bottom: var(--gap-m);
+
+        @include responsive.max(40rem) {
+            margin-bottom: var(--gap-s);
+        }
+    }
+}

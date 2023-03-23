@@ -1,0 +1,42 @@
+@use '../../layout/layout';
+@use '../../components/details';
+@use '../../utilities/responsive';
+
+.bakgrund {
+    @include layout.default();
+
+    // 1504px (94rem)
+    @include responsive.max(94rem) {
+        padding-left: var(--gap-m);
+        padding-right: var(--gap-m);
+    }
+
+    &__title {
+        margin: 0;
+
+        &:after {
+            content: url('assets/icons/Divider.svg');
+            display: block;
+            margin-top: var(--gap-s);      
+        }
+    }
+
+    &__sections {
+
+    }
+
+    &__section {
+
+    }
+
+    &__section-title {
+        @include details.underline();
+        display: inline-block;
+        margin-bottom: var(--section-gap-s);
+    }
+
+    &__section-excerpt {
+        color: #666;
+    }
+
+}
