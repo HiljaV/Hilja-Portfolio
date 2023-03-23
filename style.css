@@ -142,7 +142,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: var(--font-size-6);
+  font-size: var(--font-size-7);
 }
 
 h2 {
@@ -252,6 +252,7 @@ li {
     max-height: 6vh;
   }
 }
+
 .site-footer {
   background-color: var(--color-accent);
   display: flex;
